@@ -1,0 +1,50 @@
+1,Python,Guido van Rossum,1991,Multiparadigma
+2,Java,James Gosling,1995,Orientada a Objetos
+3,C,Dennis Ritchie,1972,Estruturada
+4,C++,Bjarne Stroustrup,1985,Multiparadigma
+5,JavaScript,Brendan Eich,1995,Multiparadigma
+6,Ruby,Yukihiro Matsumoto,1995,Orientada a Objetos
+7,PHP,Rasmus Lerdorf,1995,Multiparadigma
+8,Swift,Apple Inc.,2014,Orientada a Objetos
+9,Kotlin,JetBrains,2011,Orientada a Objetos
+10,Go,Robert Griesemer,2009,Estruturada
+11,Rust,Graydon Hoare,2010,Multiparadigma
+12,TypeScript,Microsoft,2012,Orientada a Objetos
+13,SQL,Donald D. Chamberlin,1974,Declarativa
+14,Assembly,Kathleen Booth,1949,Imperativa
+15,Lisp,John McCarthy,1958,Funcional
+16,Haskell,Simon Peyton Jones,1990,Funcional
+17,Scala,Martin Odersky,2003,Multiparadigma
+18,Perl,Larry Wall,1987,Multiparadigma
+19,Lua,Roberto Ierusalimschy,1993,Multiparadigma
+20,MATLAB,Cleve Moler,1984,Multiparadigma
+21,R,Robert Gentleman,1993,Multiparadigma
+22,Dart,Google,2011,Orientada a Objetos
+23,Julia,Jeff Bezanson,2012,Multiparadigma
+24,C#,Microsoft,2000,Orientada a Objetos
+25,Delphi,Embarcadero,1995,Orientada a Objetos
+26,Fortran,John Backus,1957,Imperativa
+27,Cobol,Grace Hopper,1959,Imperativa
+28,Ada,Jean Ichbiah,1980,Multiparadigma
+29,Prolog,Alain Colmerauer,1972,Lógica
+30,Erlang,Ericsson,1986,Funcional
+31,Elixir,José Valim,2011,Funcional
+32,Clojure,Rich Hickey,2007,Funcional
+33,F#,Microsoft,2005,Funcional
+34,Visual Basic,Microsoft,1991,Orientada a Objetos
+35,Objective-C,Tom Love,1984,Orientada a Objetos
+36,ActionScript,Gary Grossman,1998,Orientada a Objetos
+37,Groovy,James Strachan,2003,Orientada a Objetos
+38,Scheme,Guy L. Steele,1975,Funcional
+39,Smalltalk,Alan Kay,1972,Orientada a Objetos
+40,Pascal,Niklaus Wirth,1970,Estruturada
+41,PL/SQL,Oracle Corporation,1991,Declarativa
+42,Transact-SQL,Microsoft,1980,Declarativa
+43,Verilog,Phil Moorby,1984,Hardware Description
+44,VHDL,DoD,1980,Hardware Description
+45,COQ,Inria,1989,Provador de Teoremas
+46,AWK,Alfred Aho,1977,Scripting
+47,Sed,Lee E. McMahon,1974,Scripting
+48,Bash,Brian Fox,1989,Scripting
+49,Powershell,Microsoft,2006,Scripting
+50,Scratch,MIT,2002,Educacional
