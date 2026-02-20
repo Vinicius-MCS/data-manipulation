@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-#include <vector>
 #include <iomanip>
 
 using namespace std;
@@ -214,7 +213,7 @@ void imprimirTrechoArquivo() {
         return;
     }
 
-    vector<linguagemDeProgramacao> linguagensArquivo;
+    int totalLinguagens = 0;
     linguagemDeProgramacao temp;
 
     while (arquivo >> temp.id) {
@@ -224,17 +223,31 @@ void imprimirTrechoArquivo() {
         arquivo >> temp.anoLancamento;
         arquivo.ignore();
         getline(arquivo, temp.paradigma);
-        linguagensArquivo.push_back(temp);
+        totalLinguagens++;
     }
 
     arquivo.close();
-
-    int totalLinguagens = linguagensArquivo.size();
 
     if (totalLinguagens == 0) {
         cout << "O arquivo está vazio.\n";
         return;
     }
+
+    linguagemDeProgramacao* linguagensArquivo = new linguagemDeProgramacao[totalLinguagens];
+
+    arquivo.open("linguagens.txt");
+
+    for (int i = 0; i < totalLinguagens; i++) {
+        arquivo >> linguagensArquivo[i].id;
+        arquivo.ignore();
+        getline(arquivo, linguagensArquivo[i].nome, ',');
+        getline(arquivo, linguagensArquivo[i].criador, ',');
+        arquivo >> linguagensArquivo[i].anoLancamento;
+        arquivo.ignore();
+        getline(arquivo, linguagensArquivo[i].paradigma);
+    }
+
+    arquivo.close();
 
     cout << "\nTotal de linguagens no arquivo: " << totalLinguagens << endl;
 
@@ -249,6 +262,7 @@ void imprimirTrechoArquivo() {
         cout << "- Posição inicial >= 1\n";
         cout << "- Posição final <= " << totalLinguagens << "\n";
         cout << "- Posição inicial <= Posição final\n";
+        delete[] linguagensArquivo;
         return;
     }
 
@@ -268,10 +282,12 @@ void imprimirTrechoArquivo() {
     }
 
     cout << "================================================================================================================\n";
+
+     delete[] linguagensArquivo;
 }
 
 int main(){
-    int tamanho = 5;
+    int tamanho = 40;
     int opcao = -1;
     int posicao = 0;
 
@@ -331,18 +347,21 @@ int main(){
                 } else {
                     posicao = 0;
 
-                    while (entrada >> linguagens[posicao].id) {
+                    linguagemDeProgramacao temp;
+
+                    while (entrada >> temp.id) {
                         if(posicao >= tamanho) {
                             linguagens = realocarMemoria(linguagens, tamanho);
                         }
 
                         entrada.ignore();
-                        getline(entrada, linguagens[posicao].nome, ',');
-                        getline(entrada, linguagens[posicao].criador, ',');
-                        entrada >> linguagens[posicao].anoLancamento;
+                        getline(entrada, temp.nome, ',');
+                        getline(entrada, temp.criador, ',');
+                        entrada >> temp.anoLancamento;
                         entrada.ignore();
-                        getline(entrada, linguagens[posicao].paradigma);
+                        getline(entrada, temp.paradigma);
 
+                        linguagens[posicao] = temp;
                         posicao++;
                     }
                     entrada.close();
